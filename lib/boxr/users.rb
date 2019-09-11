@@ -66,7 +66,7 @@ module Boxr
     end
 
     def update_user(user, notify: nil, enterprise: true, name: nil, role: nil, language: nil, is_sync_enabled: nil,
-                             job_title: nil, phone: nil, address: nil, space_amount: nil, tracking_codes: nil,
+                             job_title: nil, phone: nil, address: nil, space_amount: nil, tracking_codes: nil, login: nil,
                              can_see_managed_users: nil, status: nil, timezone: nil, is_exempt_from_device_limits: nil,
                              is_exempt_from_login_verification: nil, is_exempt_from_reset_required: nil, is_external_collab_restricted: nil)
 
@@ -85,6 +85,7 @@ module Boxr
       attributes[:address] = address unless address.nil?
       attributes[:space_amount] = space_amount unless space_amount.nil?
       attributes[:tracking_codes] = tracking_codes unless tracking_codes.nil?
+      attributes[:login] = login unless login.nil?
       attributes[:can_see_managed_users] = can_see_managed_users unless can_see_managed_users.nil?
       attributes[:status] = status unless status.nil?
       attributes[:timezone] = timezone unless timezone.nil?
